@@ -48,7 +48,7 @@
       </div>
     </div>
    <!-- Navigation End -->
-   
+
     <div id="map-canvas"></div>
 
    <!-- footer -->
@@ -61,27 +61,45 @@
 
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
-  
+
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
-        <script src="app/scripts/app.js"></script>
-        <script src="app/scripts/controllers/main.js"></script>
-        <script src="app/scripts/map.js"></script>
-        <script src="app/scripts/controllers/about.js"></script>
+        <!-- <script src="app/scripts/app.js"></script> -->
+        <!-- <script src="app/scripts/controllers/main.js"></script> -->
+        <!-- <script src="app/scripts/map.js"></script> -->
+        <!-- <script src="app/scripts/controllers/about.js"></script> -->
         <!-- socket scripts -->
         <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
       <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
       <script src="/mapjs"></script>
       <script>
-      var socket = io();
+      // var socket = io();
 
-      //Listen for other users markers
-      socket.on('show-marker', function(data) {
-        console.log(data);
-        var loc = new google.maps.LatLng(data.lat,
-                                       data.lng);
-        addMarker(loc, data.socketId);
-      });
+      // //Listen for other users markers
+      // socket.on('show-marker', function(data) {
+      //   console.log(data);
+      //   var loc = new google.maps.LatLng(data.lat, data.lng);
+      //   addMarker(loc, data.socketId);
+      // });
+
+      // /*Add a marker to the map*/
+      // function addMarker(location, text) {
+      //     text = text || '';
+      //     var map = new google.maps.Map(document.getElementById('map-canvas'), {zoom: 16});
+      //     var marker = new google.maps.Marker({
+      //         position: location,
+      //         map: map
+      //     });
+      //
+      //     var infowindow = new google.maps.InfoWindow();
+      //
+      //     google.maps.event.addListener(marker, 'click', function() {
+      //       infowindow.setContent(text);
+      //       infowindow.open(map,marker);
+      //     });
+      //
+      //     return marker;
+      // }
     </script>
 </body>
 </html>
